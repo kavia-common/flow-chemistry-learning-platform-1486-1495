@@ -1,49 +1,23 @@
-import React, { useEffect, useState } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Layout from './components/layout/Layout';
 
-type Theme = 'light' | 'dark';
+import './styles/theme.css';
+import './styles/layout.css';
 
 // PUBLIC_INTERFACE
 function App() {
-  const [theme, setTheme] = useState<Theme>('light');
-
-  useEffect(() => {
-    document.documentElement.setAttribute('data-theme', theme);
-  }, [theme]);
-
-  // PUBLIC_INTERFACE
-  const toggleTheme = () => {
-    setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'));
-  };
-
+  /** Application root: renders the dashboard shell with placeholder main content. */
   return (
-    <div className="App">
-      <header className="App-header">
-        <button
-          className="theme-toggle"
-          onClick={toggleTheme}
-          aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
-        >
-          {theme === 'light' ? '🌙 Dark' : '☀️ Light'}
-        </button>
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
+    <Layout>
+      <section className="card" aria-label="Welcome card">
+        <h1 className="card__title">Welcome to Flow Chemistry</h1>
+        <p className="card__desc">
+          This is the starting point for the learning, simulation, and resource
+          experience. Navigation is currently a placeholder (no router yet), but
+          the dashboard shell is ready for future routes and pages.
         </p>
-        <p>
-          Current theme: <strong>{theme}</strong>
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      </section>
+    </Layout>
   );
 }
 

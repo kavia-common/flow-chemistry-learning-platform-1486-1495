@@ -1,0 +1,69 @@
+:root {
+  /* Ocean Professional theme */
+  --color-primary: #2563eb;
+  --color-accent: #f59e0b;
+  --color-error: #ef4444;
+
+  --color-bg: #f9fafb;
+  --color-surface: #ffffff;
+  --color-text: #111827;
+  --color-text-muted: rgba(17, 24, 39, 0.64);
+
+  --border-color: rgba(17, 24, 39, 0.08);
+
+  --shadow-sm: 0 1px 2px rgba(17, 24, 39, 0.06);
+  --shadow-md: 0 6px 16px rgba(17, 24, 39, 0.10);
+
+  --radius-sm: 10px;
+  --radius-md: 14px;
+
+  --transition-fast: 140ms ease;
+  --transition-med: 220ms ease;
+
+  --font-sans: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial,
+    "Apple Color Emoji", "Segoe UI Emoji";
+
+  /* Layout primitives */
+  --sidebar-width: 272px;
+  --sidebar-width-collapsed: 76px;
+  --header-height: 64px;
+  --content-max-width: 1200px;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background: var(--color-bg);
+  color: var(--color-text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+}
+
+:focus-visible {
+  outline: 3px solid rgba(37, 99, 235, 0.35);
+  outline-offset: 2px;
+  border-radius: 10px;
+}
+
+::selection {
+  background: rgba(245, 158, 11, 0.25);
+}
