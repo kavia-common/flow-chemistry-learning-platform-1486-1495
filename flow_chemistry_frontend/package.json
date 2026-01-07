@@ -5,7 +5,8 @@
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-scripts": "^5.0.1"
+    "react-scripts": "^5.0.1",
+    "@testing-library/jest-dom": "^5.17.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -29,6 +30,11 @@
     ]
   },
   "devDependencies": {
-    "cross-env": "^7.0.3"
+    "cross-env": "^7.0.3",
+    "typescript": "^5.4.5",
+    "@types/react": "^18.2.79",
+    "@types/react-dom": "^18.2.25",
+    "@types/node": "^20.12.7",
+    "@types/jest": "^29.5.12"
   }
 }
