@@ -1,0 +1,74 @@
+/* Workflow Designer page styles (kept small; relies on existing theme variables). */
+
+.workflowCard {
+  padding: 16px;
+}
+
+.workflowCard__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.workflowCard__title {
+  margin: 0;
+  font-size: 18px;
+  letter-spacing: 0.2px;
+}
+
+.workflowCard__subtitle {
+  margin: 4px 0 0 0;
+  color: var(--color-text-muted);
+  line-height: 1.45;
+  font-size: 13px;
+}
+
+.workflowCard__meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.workflowPill {
+  display: inline-flex;
+  align-items: center;
+  height: 30px;
+  padding: 0 10px;
+  border-radius: 999px;
+  border: 1px solid var(--border-color);
+  background: linear-gradient(
+    135deg,
+    rgba(37, 99, 235, 0.08),
+    rgba(245, 158, 11, 0.07)
+  );
+  box-shadow: var(--shadow-sm);
+  font-weight: 600;
+  font-size: 12px;
+  color: rgba(17, 24, 39, 0.78);
+}
+
+.workflowCanvas {
+  height: min(62vh, 640px);
+  width: 100%;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  background: rgba(255, 255, 255, 0.85);
+}
+
+/* React Flow theming tweaks */
+.workflowCanvas .react-flow__controls-button {
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+}
+
+.workflowCanvas .react-flow__minimap {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+}

@@ -1,6 +1,7 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import Header from './Header';
 import Sidebar, { NavKey, getDefaultNavItems } from './Sidebar';
+import WorkflowDesigner from '../../pages/WorkflowDesigner';
 
 export interface LayoutProps {
   children: React.ReactNode;
@@ -72,7 +73,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         />
 
         <main className="main" role="main">
-          <div className="main__inner">{children}</div>
+          <div className="main__inner">
+            {activeKey === 'workflow_designer' ? <WorkflowDesigner /> : children}
+          </div>
         </main>
       </div>
     </div>

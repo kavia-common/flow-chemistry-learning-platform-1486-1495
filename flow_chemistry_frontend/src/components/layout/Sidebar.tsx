@@ -1,6 +1,11 @@
 import React from 'react';
 
-export type NavKey = 'dashboard' | 'simulations' | 'resources' | 'community';
+export type NavKey =
+  | 'dashboard'
+  | 'simulations'
+  | 'resources'
+  | 'community'
+  | 'workflow_designer';
 
 export type NavItem = Readonly<{
   key: NavKey;
@@ -63,11 +68,23 @@ function IconUsers() {
   );
 }
 
+function IconWorkflow() {
+  return (
+    <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+      <path
+        fill="currentColor"
+        d="M6 4a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h2V8H6V6h2V4H6zm10 0v2h2v2h-2v4h2a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-2zM8 12h8v2H8v-2zm-2 6h2v-2H6v-2H4v2a2 2 0 0 0 2 2zm12-2v2h-2v2h2a2 2 0 0 0 2-2v-2h-2z"
+      />
+    </svg>
+  );
+}
+
 // PUBLIC_INTERFACE
 export function getDefaultNavItems(): ReadonlyArray<NavItem> {
   /** Returns the default sidebar navigation items (placeholder routing keys). */
   return [
     { key: 'dashboard', label: 'Dashboard', icon: <IconGrid /> },
+    { key: 'workflow_designer', label: 'Workflow Designer', icon: <IconWorkflow /> },
     { key: 'simulations', label: 'Simulations', icon: <IconBeaker /> },
     { key: 'resources', label: 'Resources', icon: <IconBook /> },
     { key: 'community', label: 'Community', icon: <IconUsers /> },
